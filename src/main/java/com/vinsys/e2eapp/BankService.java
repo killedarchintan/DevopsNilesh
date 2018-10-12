@@ -11,9 +11,10 @@ import org.springframework.web.bind.annotation.RestController;
 public class BankService {
 	Logger logger = Logger.getLogger("");
 	// we know that service
-	@RequestMapping(method = RequestMethod.GET, path = "account")
-	public String openAccount(@RequestParam(name = "accountid") String accountid) {
-		logger.info("you are opening a account with " + accountid);
-		return "You Opened a Acccount Successfully";
+	@RequestMapping(method = RequestMethod.GET, path = "cloudget")
+	public String openAccount(@RequestParam(name = "parameter") String parameter) {
+		logger.info("you are opening a account with " + parameter);
+		String s="Hi, I am Chintan. This is my first cloud API, n Thanks for visiting";
+		return s;
 	}
 }
